@@ -40,8 +40,8 @@ struct ReferenceOscillatorWidget : ModuleWidget {
         setPanel(SVG::load(assetPlugin(plugin, "res/ReferenceOscillator.svg")));
         addChild(Widget::create<ScrewSilver>(Vec(RACK_GRID_WIDTH, 0)));
         addChild(Widget::create<ScrewSilver>(Vec(RACK_GRID_WIDTH, RACK_GRID_HEIGHT - RACK_GRID_WIDTH)));
-        addOutput(Port::create<PJ301MPort>(Vec(10, 325), Port::OUTPUT, module, ReferenceOscillator::SINE_OUTPUT));
+        addOutput(Port::create<CL1362Port>(Vec(6, 185), Port::OUTPUT, module, ReferenceOscillator::SINE_OUTPUT));
     }
 };
 
-Model *modelReferenceOscillator = Model::create<ReferenceOscillator, ReferenceOscillatorWidget>("Apollo Command Modules", "ReferenceOscillator", "440 Hz Reference Oscillator", OSCILLATOR_TAG);
+Model *ReferenceOscillatorModel = Model::create<ReferenceOscillator, ReferenceOscillatorWidget>("Apollo Command Modules", "ReferenceOscillator", "440 Hz Reference Oscillator", OSCILLATOR_TAG);

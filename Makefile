@@ -1,12 +1,12 @@
 SLUG = ApolloCommandModules
-VERSION = 0.6.2
+VERSION = 0.6.0
+RACK_DIR ?=
 
-CXXFLAGS +=
+CXXFLAGS += -I$(RACK_DIR)/include
 FLAGS +=
 LDFLAGS +=
 
 DISTRIBUTABLES += $(wildcard LICENSE*) res
-RACK_DIR ?= ../..
 SOURCES += $(wildcard src/*.cpp)
 
 include $(RACK_DIR)/plugin.mk

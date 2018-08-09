@@ -3,4 +3,5 @@
 using namespace rack;
 
 extern Plugin *plugin;
-extern Model *modelReferenceOscillator;
+extern Model *ReferenceOscillatorModel;
+extern Model *SignalSplitterModel;

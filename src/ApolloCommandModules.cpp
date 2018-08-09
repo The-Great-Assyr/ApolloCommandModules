@@ -8,5 +8,6 @@ init(Plugin *p)
     plugin = p;
     p->slug = TOSTRING(SLUG);
     p->version = TOSTRING(VERSION);
-    p->addModel(modelReferenceOscillator);
+    p->addModel(ReferenceOscillatorModel);
+    p->addModel(SignalSplitterModel);
 }
